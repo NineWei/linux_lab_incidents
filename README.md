@@ -60,7 +60,7 @@ Because there was nothing running on port 3000, NGINX couldn’t connect and sho
 
 ![502 Bad Gateway in browser](prints/nginx-502-browser.png)
 
-Cleaning up
+#### Cleaning up
 To stop and remove the container after testing:
 ```bash
 docker stop nginx-502-test
