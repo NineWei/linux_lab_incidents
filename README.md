@@ -25,6 +25,8 @@ rm ~/bigfile
 
 After running the dd command, the available disk space decreased as expected.
 
+![Disk full simulation](prints/disk-full.png)
+
 ### 502 Bad Gateway with NGINX reverse proxy
 
 To simulate a **502 Bad Gateway**, a custom NGINX configuration was used to forward requests to a backend on port `3000`, which was intentionally left offline.
@@ -51,11 +53,21 @@ docker run --name nginx-502-test -d \
 ```
 
 Access:
-
 Open in your browser: http://localhost:8080
 
 Result:
-
 Because there was nothing running on port 3000, NGINX couldn’t connect and showed a 502 Bad Gateway error.
 
 ![502 Bad Gateway in browser](prints/nginx-502-browser.png)
+
+Cleaning up
+To stop and remove the container after testing:
+```bash
+docker stop nginx-502-test
+docker rm nginx-502-test
+```
+
+If you also want to delete the custom configuration file:
+```bash
+rm default.conf
+```
