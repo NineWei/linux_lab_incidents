@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="header.png" alt="Linux Lab Banner" width="100%">
+</p>
+
 # Linux Lab: Incident and Monitoring Simulations
 
 This is a personal lab project created to practice Linux commands, simulate common failures, system monitoring, and understand how logs, incidents and containers work. It includes hands-on simulations using Docker, NGINX, Prometheus, and Grafana, all running on a Linux virtual machine.
